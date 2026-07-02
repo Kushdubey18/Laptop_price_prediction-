@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laptop Price Prediction System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#ffd700;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px 8%;
+    min-height:80vh;
+}
+
+.content{
+    max-width:600px;
+}
+
+.content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    background:#ffd700;
+    color:black;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.image img{
+    width:500px;
+    max-width:100%;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:rgba(0,0,0,0.2);
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">💻 Laptop Predictor</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="content">
+        <h1>Predict Your Laptop Price Instantly</h1>
+
+        <p>
+            Get an accurate estimate of your laptop's market value using
+            Machine Learning. Enter details such as Brand, RAM, Storage,
+            Processor, Operating System, and Screen Size to receive an
+            instant price prediction.
+        </p>
+
+        <a href="/project">
+            <button class="btn">Start Prediction</button>
+        </a>
+    </div>
+
+    <div class="image">
+        <img src="{{ url_for('static', filename='laptop.jpeg') }}"
+             alt="Laptop">
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 Laptop Price Prediction System | Developed with Flask & Machine Learning</p>
+</footer>
+
+</body>
+</html>

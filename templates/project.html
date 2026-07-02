@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop  Price Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+   
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: center;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #3e8e41;
+}
+
+.disclaimer {
+    font-size: 0
+}
+.Prediction{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+}
+</style>
+<body>
+    <header>
+        <h1>Laptop Price Prediction</h1>
+    </header>
+    <main>
+        <section class="description">
+            <h2>Welcome to the Laptop Price Prediction Tool!</h2>
+            <p>🔹 Turn Specifications into Smart Price Insights. Discover the true value of a laptop in seconds with the power of Machine Learning.
+</p>
+        </section>
+        <section class="form-container">
+            <h3>Enter Laptop Details</h3>
+<form action="{{ url_for('predict') }}" method="post">
+            
+                <label for="Company">Company:</label>
+                <select name="Company" id="fifth" required="required">
+                        <option value="Acer" >Acer</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Asus">Asus</option>
+                        <option value="Chuwi">Chuwi</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Fujitsu">Fujitsu</option>
+                        <option value="HP">HP</option>
+                        <option value="LG">LG</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="MSI">MSI</option>
+                        <option value="Mediacom">Mediacom</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Razer">Razer</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Toshiba">Toshiba</option>
+                        <option value="Vero">Vero</option>
+                        <option value="Xiaomi">Xiaomi</option>
+
+        </select><br><br>
+                
+                <label for="TypeName">TypeName:</label>
+                <select name="TypeName" id="fifth" required="required">
+                <option value="1">Gaming</option>
+                <option value="2">Notebook</option>
+                <option value="3">2 in 1 Convertible</option>
+                <option value="4">Netbook</option>
+                <option value="5">Ultrabook</option>
+                <option value="6">Workstation'</option>
+        </select><br><br>
+            
+                
+                <label for="Inches">Inches</label>
+                <select name="Inches" id="fifth" required="required">
+                <option value="1">15.6</option>
+                <option value="2">14</option>
+                <option value="3">17</option>
+                <option value="4">17.3</option>
+                <option value="5">13.3</option>
+                <option value="6">12.5</option>
+                <option value="7">11.6</option>
+                <option value="8">12.3</option>
+                <option value="9">18.4</option>
+                <option value="10">15</option>
+                <option value="11">12</option>
+                <option value="12">15</option>
+                <option value="13">13</option>
+                <option value="14">13.5</option>
+                <option value="15">14.1</option>
+                <option value="16">11.3</option>
+                <option value="17">13.9</option>
+                <option value="18">10.1</option>
+                
+        </select><br><br>
+                <label for="Ram">Ram:</label>
+                <input type="text" name = 'Ram' required>
+         <br><br>
+
+
+                <label for="">Memory</label>
+                <input type="text" name ="Memory"required>
+        <br><br>
+               <select name="OpSys" id="fifth">
+                <option value="1">Windows 10</option>
+                <option value="2">No OS</option>
+                <option value="3">Linux</option>
+                <option value="4">Windows 7</option>
+                <option value="5">Chrome OS</option>
+                <option value="6">Windows 10 S</option>
+                <option value="7">macOS</option>
+                <option value="8">Mac OS X</option>
+                <option value="9">Android</option>
+         </select>
+                
+                <button type="submit">Predict Price</button>
+            </form>
+            <!-- <p class="disclaimer">**Disclaimer:** This is a basic website for demonstration purposes only. A real prediction model would require additional features and machine learning integration.</p>
+        </section> -->
+        <!-- <section class="results">
+            <h2>Predicted Price</h2>
+            <p id="predicted-price">**This is where the predicted price will be displayed.**</p>
+        </section> -->
+    </main>
+    <div class="Prediction">
+    <h2>Laptop  Price is : {{ prediction }}</h2>
+</div>
+    <footer>
+        <!-- <p>&copy;2024 Bike Price Prediction</p> -->
+    </footer>
+</body>
+</html>
