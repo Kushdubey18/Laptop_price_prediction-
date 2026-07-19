@@ -3,7 +3,7 @@ import joblib
 
 app = Flask(__name__)
 
-model = joblib.load("model/rb.lb")
+model = joblib.load("model//rb.lb")
 
 @app.route('/')
 def index():
